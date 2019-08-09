@@ -1,23 +1,21 @@
 def find_element_index(array, value_to_find)
- counter = 0
-  while counter < array.length do
-    if array[counter] === value_to_find
-      return counter
-    else 
-      counter += 1 
-    end
-  end 
+ #counter = 0
+  #while counter < Array.length do
+    array.length.times do |counter|
+      if array[counter] === value_to_find
+        return counter
+      end
+    end 
+    nil 
 end
 
 def find_max_value(array)
-  counter = 0 
+  #counter = 0 
   temp = 0
-  while counter < array.length do
-    if temp > array[counter]
-      counter+=1
-    else
+  #while counter < array.length do
+  array.length.times do |counter|
+    if temp < array[counter]
       temp = array[counter]
-      counter += 1 
     end
   end
   return temp
